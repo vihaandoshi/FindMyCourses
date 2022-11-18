@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/vihaandoshi/FindMyCourses#readme",
   "dependencies": {
+    "@chakra-ui/react": "^2.4.1",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "express": "^4.18.2",
+    "framer-motion": "^7.6.7",
     "mongoose": "^6.7.2"
   }
 }
