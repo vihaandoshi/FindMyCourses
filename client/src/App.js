@@ -1,6 +1,7 @@
-//import logo from './logo.svg';
+
 import './App.css';
-import Navbar from './Components/NavigationBar/Navbar.jsx';
+import Navbar from './Components/Navbar.jsx';
+import Footer from './Components/Footer.jsx';
 import {Routes, Route } from 'react-router-dom';
 import About from './pages/About';
 import Home from './pages/Home';
@@ -9,15 +10,18 @@ import Search from './pages/Search';
 
 function App() {
   return (
-    <nav>
-      <Navbar />
-      <Routes> 
-        <Route path ="/home" element={<Home />} />
-        <Route path ="/search" element={<Search />} />
-        <Route path ="/survey" element={<Survey />} />
-        <Route path ="/about" element={<About />} />
-      </Routes>
-    </nav>
+    <div>
+      <nav>
+        <Navbar />
+        <Routes> 
+          <Route path ="/home" element={<Home />} />
+          <Route path ="/search" element={<Search />} />
+          <Route path ="/survey" element={<Survey />} />
+          <Route path ="/about" element={<About />} />
+        </Routes>
+      </nav>
+      <Footer />
+    </div>
   );
 }
 
