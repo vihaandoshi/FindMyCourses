@@ -1,0 +1,23 @@
+.container {
+    display: block;
+}
+.form {
+    display:flex;
+    justify-content: center;
+}
+
+.course {
+    width : 75%;
+}
+
+.btn {
+    margin-top: 10px;
+    background-color: whitesmoke;
+    border : none;
+    width : 75%;
+    
+}
+.btn:hover {
+    background-color: #FDB515;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.24)
+}
