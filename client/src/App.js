@@ -7,6 +7,7 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Survey from './pages/Survey';
 import Search from './pages/Search';
+import Scheduler from './pages/Scheduler';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Routes> 
           <Route path ="/home" element={<Home />} />
           <Route path ="/search" element={<Search />} />
-          <Route path ="/survey" element={<Survey />} />
+          <Route path ="/scheduler" element={<Scheduler />} />
           <Route path ="/about" element={<About />} />
         </Routes>
       </nav>

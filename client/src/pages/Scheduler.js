@@ -1,3 +1,7 @@
 export default function Scheduler(){
-    return <h1> Scheduler </h1>
+    return (
+    <div><h1> Search component at top </h1>
+    <h1> Scheduler </h1>
+    </div>
+    )
 }
