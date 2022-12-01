@@ -2,7 +2,7 @@ import React from "react";
 const ClassCard = () => {
     return (
         <h1> 
-        Test 
+        Test1
         </h1>
     )
 }
