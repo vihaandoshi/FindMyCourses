@@ -1,7 +1,6 @@
 import React from 'react'; 
 import { NavLink  } from 'react-router-dom';
 import '../styles/Footer.css';
-import {FaLinkedin} from 'react-icons/fa'; 
 
 const Footer = () => {
   return (
@@ -11,7 +10,7 @@ const Footer = () => {
         <div className="body"> 
         <p>sleep deprived berkeley students :p</p>
         <p>we can do a grid of pictures and linkedins if you guys want </p> 
-        <p>like <a href="https://www.linkedin.com/feed/"> <FaLinkedin className="icon"/> </a> </p>
+
         </div> 
       </div> 
 

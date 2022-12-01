@@ -1,0 +1,12 @@
+img {
+    width: 20%; 
+    height: 20%; 
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
+.icon {
+    color: white; 
+    width: 5%; 
+    height: auto; 
+}
