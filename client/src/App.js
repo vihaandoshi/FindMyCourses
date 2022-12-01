@@ -19,6 +19,7 @@ function App() {
           <Route path ="/search" element={<Search />} />
           <Route path ="/scheduler" element={<Scheduler />} />
           <Route path ="/about" element={<About />} />
+          <Route path ="/survey" element={<Survey/>} />
         </Routes>
       </nav>
       <Footer />
