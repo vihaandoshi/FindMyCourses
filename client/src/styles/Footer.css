@@ -1,12 +1,59 @@
-
+* {
+    color: #003262; 
+}
 
 .icon {
-    width: 5%; 
+    width: 50%; 
     height: auto; 
     color: #003262; 
+}
+
+.row {
+    background-color:  #fdb415a5;
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    width: 100%; 
+    justify-content: space-around;
+}
+
+.column{
+    display: flex; 
+    flex-direction: column;
+    flex-basis: 100%; 
+    flex: 1; 
+    align-items: center;
+    font-size: small; 
+}
+
+.body {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-our-team {
 
 }
 
-.resources {
+.div-resources {
 
 }
+
+.div-contact-us {
+
+}
+
+.btn {
+    margin-left : 2%; 
+    background-color: whitesmoke;
+    border : none;
+ 
+}
+
+.btn:hover {
+    background-color: #FDB515;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.24)
+}
+
+
