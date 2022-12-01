@@ -18,6 +18,11 @@
   display: inline-flex;
 }
 
+.logo{
+  width: 65px;
+  height: 65px;
+}
+
 .website {
   margin-left: 5px;
   font-family: 'Montserrat', sans-serif;

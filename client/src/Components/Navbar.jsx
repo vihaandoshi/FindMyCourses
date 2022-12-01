@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div className={NavbarCSS.menu}>
             <div className={NavbarCSS.branding}>
-                <img src={require('../logo.png')} alt="logo" width="65" height ="65" />
+                <img src={require('../logo.png')} alt="logo" className={NavbarCSS.logo}/>
                 <p className={NavbarCSS.website}> Find My Courses </p>
             </div>
             <ul className = {NavbarCSS.list}>
