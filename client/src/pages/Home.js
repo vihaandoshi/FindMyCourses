@@ -1,3 +1,4 @@
+import React from "react";
 const Home= () => {
     return (
     <div><h1> UC Berkeley's course information in one place. </h1>
