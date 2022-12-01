@@ -10,7 +10,7 @@ const Navbar = () => {
                 <p className={NavbarCSS.website}> Find My Courses </p>
             </div>
             <ul className = {NavbarCSS.list}>
-                <NavLink to="/home" className={NavbarCSS.btn}> Home </NavLink>
+                <NavLink to="/" className={NavbarCSS.btn}> Home </NavLink>
                 <NavLink to="/search" className={NavbarCSS.btn}> Search </NavLink>
                 <NavLink to="/scheduler" className={NavbarCSS.btn}> Scheduler </NavLink>
                 <NavLink to="/about" className={NavbarCSS.btn}> About </NavLink>
