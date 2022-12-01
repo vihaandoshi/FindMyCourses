@@ -3,7 +3,6 @@ import '../styles/Profile.css';
 import {AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'; 
 
 const Profile = (props) => {
-    let iconStyles = {color: "white", fontSize: "1.5em"}; 
     return (
         <div className="card">
             <div className="content">

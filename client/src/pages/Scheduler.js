@@ -1,8 +1,20 @@
 import React from "react";
-export default function Scheduler(){
+import Search from "./Search"; 
+import  '../styles/Scheduler.css';
+const Scheduler = () => {
     return (
-    <div><h1> Search component at top </h1>
-    <h1> Scheduler </h1>
-    </div>
-    )
+    <div> 
+    <div className="r">
+        <div className="c">
+            
+            <Search></Search>
+        </div>
+        <div className = "schedule c">
+
+        </div>
+    </div> 
+    </div> 
+) 
 }
+
+export default Scheduler

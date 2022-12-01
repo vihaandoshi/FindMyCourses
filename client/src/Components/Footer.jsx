@@ -5,27 +5,23 @@ import '../styles/Footer.css';
 const Footer = () => {
   return (
     <div className="row"> 
-      <div className = "div-our-team column"> 
-        <h2>Our Team</h2> 
-        <div className="body"> 
-        <p>sleep deprived berkeley students :p</p>
-        <p>we can do a grid of pictures and linkedins if you guys want </p> 
-
-        </div> 
-      </div> 
 
       <div className = "div-resources column"> 
-        <h2>Resources</h2> 
-          <div className="body"> 
+        <h3>Resources</h3> 
+          <div className="links row"> 
+          <div className="column"> 
            <p><a href="https://berkeleytime.com/landing">BerkeleyTime</a></p>
            <p><a href="https://classes.berkeley.edu/search/class">Berkeley Academic Guide: Class Schedule</a></p>
+          </div> 
+          <div className="column">
            <p><a href="https://guide.berkeley.edu/courses/">Berkeley Academic Guide: Courses</a> </p>
            <p><a href="https://berkeleytime.com/landing">Some other link idk</a></p>
+          </div>
           </div> 
        </div>
 
       <div className = "div-contact-us column"> 
-        <h2>Contact Us</h2> 
+        <h3>Contact Us</h3> 
         <form> 
           <p><label>Comment or Concern? Let us know here!</label> </p>
           <input type="text" placeholder="Enter Message Here"></input>  

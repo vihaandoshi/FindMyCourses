@@ -1,0 +1,23 @@
+.r {
+    display: flex; 
+    flex-direction: 'row';
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    
+}
+
+.c {
+    display: flex; 
+    flex-direction: 'column';
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%; 
+    margin: 20px; 
+    flex: 1; 
+}
+
+.schedule {
+    background-color: #003362bf ;
+    border-radius: 2%;
+    padding: 2%; 
+}
