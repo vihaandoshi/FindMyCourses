@@ -53,6 +53,7 @@ input[type=checkbox] {
     margin: 0px;
 }
 
-input[type=submit]{
+.submit-button {
     align-self: flex-start;
+    padding: 5px;
 }
