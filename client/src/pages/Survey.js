@@ -32,27 +32,27 @@ const Survey = () => {
                     </div>
                     <div className="question">
                         <label> Grade Received: </label>
-                        <input type="text" required/>
+                        <input type="text"/>
                     </div>
                     <div className="question">
                         <label> Required textbooks: </label>
-                        <input type="text" required/>
+                        <input type="text"/>
                     </div>
                     <div className="question">
                         <label> Hours a week for homework: </label>
-                        <input type="number" min="0" max="168" required/>
+                        <input type="number" min="0" max="168"/>
                     </div>
                     <div className="question">
                         <label> Number of midterms: </label>
-                        <input type="number" min="0" max="100"/>
+                        <input type="number" min="0" max="20"/>
                     </div>
                     <div className="question">
                         <label> Prereqs/coreqs: </label>
-                        <input type="text" required/>
+                        <input type="text"/>
                     </div>
                     <div className="question">
                         <label> Classes to help prepare: </label>
-                        <input type="text" required/>
+                        <input type="text"/>
                     </div>
                     <div className="question">
                         <label> Next classes to take: </label>

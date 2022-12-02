@@ -14,15 +14,15 @@ const About = () => {
         <div className="bigbox"> 
         <h1 className="title">OUR TEAM</h1> 
         <div className="row1"> 
-        <Profile fname="anna" lname="chung" role="clown" ig="https://www.instagram.com/anna_jimichu/" lkn="https://www.linkedin.com/in/annajchung" img={anna} > </Profile>
-        <Profile fname="jennifer" lname="yin" role="role" ig="https://www.instagram.com/jenniferyin00/" lkn="https://www.linkedin.com/in/jenniferyin0" img={jenjen} > </Profile> 
-        <Profile fname="julia" lname="zhang" role="role" ig="" lkn="" img={julia} > </Profile> 
+        <Profile fname="Anna" lname="Chung" role="clown" ig="https://www.instagram.com/anna_jimichu/" lkn="https://www.linkedin.com/in/annajchung" img={anna} > </Profile>
+        <Profile fname="Jennifer" lname="Yin" role="role" ig="https://www.instagram.com/jenniferyin00/" lkn="https://www.linkedin.com/in/jenniferyin0" img={jenjen} > </Profile> 
+        <Profile fname="Julia" lname="Zhang" role="role" ig="" lkn="" img={julia} > </Profile> 
         </div> 
         <div className="row1">
-            <Profile fname="kelly" lname="yeh" role="role" ig="" lkn="" img={kelly} > </Profile> 
-            <Profile fname="risheek" lname="" role="role" ig="" lkn="" img={risheek} > </Profile> 
-            <Profile fname="tanya" lname="mehta" role="role" ig="" lkn="" img={tanya} > </Profile> 
-            <Profile fname="vihaan" lname="" role="role" ig="" lkn="" img={vihaan} > </Profile> 
+            <Profile fname="Kelly" lname="Yeh" role="role" ig="" lkn="" img={kelly} > </Profile> 
+            <Profile fname="Risheek" lname="Somu" role="role" ig="" lkn="" img={risheek} > </Profile> 
+            <Profile fname="Tanya" lname="Mehta" role="role" ig="" lkn="" img={tanya} > </Profile> 
+            <Profile fname="Vihaan" lname="Doshi" role="illusionist" ig="" lkn="https://www.linkedin.com/in/vihaandoshi/" img={vihaan} > </Profile> 
         </div> 
         </div> 
     )
