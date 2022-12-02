@@ -4,10 +4,10 @@ const express = require('express')
 const app = express()
 
 const mongoose = require('mongoose')
-mongoose.connect("mongodb+srv://findcourses:fullstackdecal@findmycourses.abmjg6z.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect(process.env.DATABASE_URI)
     .then(() => {
         app.listen(process.env.PORT, () => {
-            console.log("Listening");
+            console.log("Listening", process.env.PORT);
         })
     })
     .catch((error) => {
