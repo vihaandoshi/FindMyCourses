@@ -28,7 +28,7 @@ const Scheduler = () => {
     return (
     <div> 
     <div className="r">
-        <div className="c">
+        <div className="c abs">
             <CourseList courseAction={updateSchedule}></CourseList>  
         </div>
         <div className = "schedule c" id = "schedule">

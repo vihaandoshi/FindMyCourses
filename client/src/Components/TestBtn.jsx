@@ -7,7 +7,7 @@ import React from 'react';
 const TestBtn = (props) => { 
     
     var dict={ 
-            courseName: "cs 61c: machine structure", 
+            courseName: "CS 61C: Machine Structures", 
             units: 4, 
             bName : "add course"
          }; 

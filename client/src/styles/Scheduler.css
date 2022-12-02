@@ -23,5 +23,10 @@
     min-height: min-content;
     max-height: max-content; 
     flex-direction: column;
-    
+}
+
+.abs {
+    display: flexbox; 
+    position: static; 
+    top: 0; 
 }

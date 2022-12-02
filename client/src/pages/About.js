@@ -16,12 +16,12 @@ const About = () => {
         <div className="row1"> 
         <Profile fname="Anna" lname="Chung" role="clown" ig="https://www.instagram.com/anna_jimichu/" lkn="https://www.linkedin.com/in/annajchung" img={anna} > </Profile>
         <Profile fname="Jennifer" lname="Yin" role="role" ig="https://www.instagram.com/jenniferyin00/" lkn="https://www.linkedin.com/in/jenniferyin0" img={jenjen} > </Profile> 
-        <Profile fname="Julia" lname="Zhang" role="role" ig="" lkn="" img={julia} > </Profile> 
+        <Profile fname="Julia" lname="Zhang" role="role" ig="" lkn="https://www.linkedin.com/in/julia-zhang-b4a707225" img={julia} > </Profile> 
         </div> 
         <div className="row1">
-            <Profile fname="Kelly" lname="Yeh" role="role" ig="" lkn="" img={kelly} > </Profile> 
-            <Profile fname="Risheek" lname="Somu" role="role" ig="" lkn="" img={risheek} > </Profile> 
-            <Profile fname="Tanya" lname="Mehta" role="role" ig="" lkn="" img={tanya} > </Profile> 
+            <Profile fname="Kelly" lname="Yeh" role="role" ig="" lkn="https://www.linkedin.com/in/kelly-yeh-b08217232/" img={kelly} > </Profile> 
+            <Profile fname="Risheek" lname="Somu" role="role" ig="" lkn="https://www.linkedin.com/in/sheek/" img={risheek} > </Profile> 
+            <Profile fname="Tanya" lname="Mehta" role="role" ig="" lkn="https://www.linkedin.com/in/tanyamehta005/" img={tanya} > </Profile> 
             <Profile fname="Vihaan" lname="Doshi" role="illusionist" ig="" lkn="https://www.linkedin.com/in/vihaandoshi/" img={vihaan} > </Profile> 
         </div> 
         </div> 
