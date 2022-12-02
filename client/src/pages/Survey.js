@@ -40,11 +40,11 @@ const Survey = () => {
                     </div>
                     <div className="question">
                         <label> Hours a week for homework: </label>
-                        <input type="numeric" required/>
+                        <input type="number" min="0" max="168" required/>
                     </div>
                     <div className="question">
                         <label> Number of midterms: </label>
-                        <input type="numeric" required/>
+                        <input type="number" min="0" max="100"/>
                     </div>
                     <div className="question">
                         <label> Prereqs/coreqs: </label>
@@ -70,6 +70,12 @@ const Survey = () => {
                         <label> Has mandatory discussions? </label>
                         <input type="checkbox" required/>
                     </div>
+                    <div className="question">
+                        <label> Comments? </label>
+                        <input type="text" className="comment"/>
+                    </div>
+                    <div className="question next-line"> </div>
+                    <div className="question next-line"> </div>
                     {/* <h3> Professor: <input type="text"/> </h3>
                     <h3> Year: <input type="numeric" maxlength="4"/> </h3>
                     <h3> Semester: <input type="text"/> </h3>
@@ -85,7 +91,9 @@ const Survey = () => {
                     <h3> Has a clobber policy? <input type="checkbox" value="true" /> </h3>
                     <h3> Has mandatory discussion attendance? <input type="checkbox" value="true" /> </h3> */}
 
-                    <input type="submit"/>
+                    <div className="question button">
+                        <input type="submit"/>
+                    </div>
                 </div>
             </form>
      </div>
