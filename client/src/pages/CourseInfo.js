@@ -7,12 +7,8 @@ const [listOfClasses, setListOfClasses] = useState([]);
     }, []);
 
     return (
-        <div courseName={SearchCSS.container}>
-            <form courseName={SearchCSS.form}>
-                <div> 
-                    <h1>Course Information</h1>
-                </div>
-            </form>
+        <div courseName={}>
+                <h1>Course Information</h1>
             <div>
                 {listOfClasses.map((course) => {
                     return (
