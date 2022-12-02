@@ -6,10 +6,9 @@ const CourseInfo = (props) => {
         <div className='container'>
            <span className="courseInfo"> 
                 <h3>{props.className}</h3>
-                <h4> {props.gradeRecieved} gradeRecieved</h4> 
+                <h4>{props.gradeRecieved} Grade Received: </h4> 
             </span>  
         </div>
     )
 }
-
 export default CourseInfo
