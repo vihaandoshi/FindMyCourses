@@ -9,7 +9,7 @@ const CourseWButton = (props) => {
             <h4> {props.units} units</h4> 
         </div> 
         <div className = "btnPos"> 
-        <button className = "btnStyle" onClick = {() => props.handleClick()}>{props.bName}</button> 
+        <button className = "btnStyle" onClick={() => {props.handleClick()}}>{props.bName}</button> 
         </div> 
         </div> 
     ); 

@@ -13,7 +13,7 @@ const TestBtn = (props) => {
          }; 
     
 return (
-    <button onClick= {()=> props.update(dict)}>TESTING</button> 
+    <button onClick= {() => props.update(dict)}>TESTING</button> 
 )
 }
 
