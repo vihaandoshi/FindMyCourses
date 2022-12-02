@@ -7,20 +7,23 @@ const Profile = (props) => {
         <div className="card">
             <div className="content">
                 <div className="img-container">
-                    <img src={props.img} alt="anna"/>
+                    <img className="pfp" src={props.img} alt="anna"/>
                 </div>
-                <div className="des-container">
-                    <h3>{props.fname} {props.lname}<br></br><span>{props.role}</span></h3>
+                <div className="des-container"> 
+                    <div className="text"> 
+                    <h3>{props.fname} {props.lname}</h3>
+                    <h4>{props.role}</h4>
+                    </div> 
+                    <div className="icons"> 
+                    <a href={props.lkn}><AiFillLinkedin className="icon"/></a> 
+                    <a href={props.ig}><AiFillInstagram className="icon"/></a> 
+                    </div> 
                 </div>
             </div> 
-            <ul>
-                <li>
-                    <span > <a href={props.lkn}><AiFillLinkedin className="icon"/></a> </span>
-                </li>
-                <li>
-                <span ><a href={props.ig}><AiFillInstagram className="icon"/></a> </span>
-                </li>
-            </ul>
+          
+               
+              
+        
         </div>
     )
 
