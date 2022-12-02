@@ -42,7 +42,7 @@ const Search = () => {
                 .map((course) => {
                     return (
                         <div>
-                            <ClassCard courseName={course.CourseName} units={course.Units}> </ClassCard>
+                            <ClassCard courseName={course.CourseName} department={course.Department} units={course.Units}> </ClassCard>
                         </div>
                     );
                 })

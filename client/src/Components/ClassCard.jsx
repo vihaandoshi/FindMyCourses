@@ -16,9 +16,10 @@ const ClassCard = (props) => {
     return (
         <div className="container"> 
             <span className="courseInfo"> 
-                <h3>{props.courseName}</h3>
-                <h4> {props.units} units</h4> 
-            </span> 
+                <h3> {props.courseName}</h3>
+                <h4> {props.units} units</h4>
+                <h4> {props.department} </h4> 
+            </span>
         </div> 
         )
 }
