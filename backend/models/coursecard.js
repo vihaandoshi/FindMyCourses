@@ -5,11 +5,12 @@ const courseCardSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    Department: {
-        type: String,
-        required: true
+    Units: {
+        type: Number,
+        required: true,
+        default : 4
     },
-    Professor: {
+    Department: {
         type: String,
         required: true
     },
@@ -35,7 +36,7 @@ const courseCardSchema = new mongoose.Schema({
     },
 },  {collection: "coursecard" })
 
-module.exports = mongoose.model('Coursecard', courseCardSchema, 'coursecard');
+module.exports = mongoose.model('CourseCard', courseCardSchema);
     
 
 
