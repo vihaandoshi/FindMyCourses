@@ -3,7 +3,6 @@
     flex-direction: 'row';
     flex-wrap: wrap; 
     justify-content: space-around; 
-    
 }
 
 .c {
@@ -17,7 +16,12 @@
 }
 
 .schedule {
+    display: flexbox;
     background-color: #003362bf ;
     border-radius: 2%;
     padding: 2%; 
+    min-height: min-content;
+    max-height: max-content; 
+    flex-direction: column;
+    
 }
