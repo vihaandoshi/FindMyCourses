@@ -11,11 +11,11 @@ const Footer = () => {
           <div className="links row"> 
           <div className="column"> 
            <p><a href="https://berkeleytime.com/landing">BerkeleyTime</a></p>
-           <p><a href="https://classes.berkeley.edu/search/class">Berkeley Academic Guide: Class Schedule</a></p>
+           <p><a href="https://classes.berkeley.edu/search/class"> Class Schedule</a></p>
           </div> 
           <div className="column">
-           <p><a href="https://guide.berkeley.edu/courses/">Berkeley Academic Guide: Courses</a> </p>
-           <p><a href="https://berkeleytime.com/landing">Some other link idk</a></p>
+           <p><a href="https://guide.berkeley.edu/courses/"> Course Guide </a> </p>
+           <p><a href="https://www.ratemyprofessors.com/"> Professors </a></p>
           </div>
           </div> 
        </div>

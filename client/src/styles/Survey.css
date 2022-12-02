@@ -1,0 +1,58 @@
+.container {
+    position: relative;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.container form .survey-questions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.survey-questions .question {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 40px);
+    margin-bottom: 60px;
+}
+
+.survey-questions .checkbox-question {
+    display: flex;
+    width: calc(100% / 3 - 40px);
+    margin-bottom: 60px;
+}
+
+input[type=checkbox] {
+    margin: 0 10px;
+}
+
+.question label {
+    font-size: 16px;
+}
+
+.question input {
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.question input:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.question .comment {
+    height: 100px;
+    width: 600px;
+}
+
+.question .next-line {
+    margin: 0px;
+}
+
+input[type=submit]{
+    align-self: flex-start;
+}

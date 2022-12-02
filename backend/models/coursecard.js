@@ -1,11 +1,16 @@
-const mongoose = requier('mongoose')
+const mongoose = require('mongoose');
 
 const courseCardSchema = new mongoose.Schema({
-    Department: {
+    CourseName: {
         type: String,
         required: true
     },
-    Professor: {
+    Units: {
+        type: Number,
+        required: true,
+        default : 4
+    },
+    Department: {
         type: String,
         required: true
     },
@@ -14,24 +19,24 @@ const courseCardSchema = new mongoose.Schema({
         default: "None"
     }],
     HoursPerWeek: {
-        type: Int16Array,
+        type: Number,
         required: true
     },
-    Prerequisites: [{
-        type: String,
+    Prerequisites: {
+        type: [String],
         default: "None"
-    }],
-    Corequisites: [{
-        type: String,
+    },
+    Corequisites: {
+        type: [String],
         default: "None"
-    }],
+    },
     Textbooks: {
-        type: String,
-        required: true
+        type: [String],
+        default: "None"
     },
-})
+},  {collection: "coursecard" })
 
-module.exports = mongoose.model('CourseCard', courseCardSchema)
+module.exports = mongoose.model('CourseCard', courseCardSchema);
     
 
 

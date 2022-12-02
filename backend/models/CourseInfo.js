@@ -1,10 +1,7 @@
-const { interactivity } = require("@chakra-ui/react")
-const { model } = require("mongoose")
-
-const mongoose = requier('mongoose')
+const mongoose = require('mongoose');
 
 const courseInfoSchema = new mongoose.Schema({
-    Class: {
+    ClassName: {
         type: String,
         required: true
     },
@@ -21,8 +18,8 @@ const courseInfoSchema = new mongoose.Schema({
         default: "N/A"
     },
     Midterms: {
-        type: Int16Array,
-        default: 'None'
+        type: Number,
+        default: 0
     },
     Clobber: {
         type: String,
@@ -33,25 +30,25 @@ const courseInfoSchema = new mongoose.Schema({
         required: true
     },
     Difficulty: {
-        type: Int16Array,
+        type: Number,
         required: true
     }, 
-    NextClasses: [{
-        type: String, 
-        default: "None"
-    }],
-    ClassesForPrep: [{
-        type:String,
-        default: "None"
-    }],
+    NextClasses: {
+        type: [String], 
+        default: []
+    },
+    ClassesForPrep: {
+        type:[String],
+        default: []
+    },
     Comment: {
-        type:String,
+        type: [String],
         required: true
     },
-    UsefulResources: [{
-        type: String,
-        default: "None"
-    }]
-})
+    UsefulResources: {
+        type: [String],
+        default: []
+    }
+}, {collection: "courseinfo" })
 
-model.exports = mongoose.model('CourseInfo', courseInfoSchema)
+module.exports = mongoose.model('CourseInfo', courseInfoSchema);
