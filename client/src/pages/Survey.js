@@ -4,7 +4,7 @@ import Axios from "axios";
 
 const Survey = () => {
     const [listOfReviews, setListOfReviews] = useState([]);
-    const [nameOfClass, setNameOfClass] = useState("");
+    const [className, setClassName] = useState("");
     const [professor, setProfessor] = useState("");
     const [year, setYear] = useState(2022);
     const [semester, setSemester] = useState("");
@@ -29,7 +29,7 @@ const Survey = () => {
 
     const createReview = () => {
         Axios.post("http://localhost:3001/addReview", {
-            nameOfClass,
+            className,
             professor,
             year,
             semester,
@@ -56,7 +56,7 @@ const Survey = () => {
                 {listOfReviews.map((user) => {
                     return (
                     <div>
-                        <h1> Class Name: {user.nameOfClass} </h1>
+                        <h1> Class Name: {user.className} </h1>
                     </div>
                     );
                 })}
@@ -73,7 +73,7 @@ const Survey = () => {
                             <label> Class name: </label>
                             <input
                                 type="text"
-                                onChange={(event) => {setNameOfClass(event.target.value);}}
+                                onChange={(event) => {setClassName(event.target.value);}}
                                 required
                             />                        
                         </div>
