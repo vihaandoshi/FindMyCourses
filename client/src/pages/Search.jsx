@@ -27,7 +27,7 @@ const Search = () => {
                 {listOfClasses.map((course) => {
                     return (
                         <div>
-                            <CourseWButton courseName={course.CourseName} units={course.Units}> </CourseWButton>
+                            {/* <CourseWButton courseName={course.CourseName} units={course.Units}> </CourseWButton> */}
                         </div>
                     );
                 })

@@ -3,20 +3,48 @@ import SurveyCSS from "../styles/Survey.css";
 import Axios from "axios";
 
 const Survey = () => {
-    const [listOfReviews, setListOfReviews] = useState([
-        {nameOfClass: "70"}
-    ]);
+    const [listOfReviews, setListOfReviews] = useState([]);
     const [nameOfClass, setNameOfClass] = useState("");
+    const [professor, setProfessor] = useState("");
+    const [year, setYear] = useState(2022);
+    const [semester, setSemester] = useState("");
+    const [difficulty, setDifficulty] = useState(1);
+    const [grade, setGrade] = useState("");
+    const [textbooks, setTextbooks] = useState("");
+    const [HWHours, setHWHours] = useState(0);
+    const [midterms, setMidterms] = useState(0);
+    const [prereqs, setPrereqs] = useState("");
+    const [prepareClasses, setPrepareClasses] = useState("");
+    const [nextClasses, setNextClasses] = useState("");
+    const [noHW, setNoHW] = useState(false);
+    const [clobber, setClobber] = useState(false);
+    const [mandDisc, setMandDisc] = useState(false);
+    const [comments, setComments] = useState("");
 
-    useEffect(() => {
-        Axios.get("http://localhost:3001/getCourseReviews").then((response) => {
-            setListOfReviews(response.data);
-        });
-    }, []);
+    // useEffect(() => {
+    //     Axios.get("http://localhost:3001/getReview").then((response) => {
+    //         setListOfReviews(response.data);
+    //     });
+    // }, []);
 
     const createReview = () => {
         Axios.post("http://localhost:3001/addReview", {
-            nameOfClass
+            nameOfClass,
+            professor,
+            year,
+            semester,
+            difficulty,
+            grade,
+            textbooks,
+            HWHours,
+            midterms,
+            prereqs,
+            prepareClasses,
+            nextClasses,
+            noHW,
+            clobber,
+            mandDisc,
+            comments
         }).then((response) => {
             alert("SUBMITTED!");
         })
@@ -24,7 +52,7 @@ const Survey = () => {
 
     return(
         <div className="survey">
-            <div className="userDisplay">
+            {/* <div className="userDisplay">
                 {listOfReviews.map((user) => {
                     return (
                     <div>
@@ -32,209 +60,158 @@ const Survey = () => {
                     </div>
                     );
                 })}
-            </div>
+            </div> */}
 
-            <div className="question">
-                <label> Class name: </label>
-                <input
-                    type="text"
-                    onChange={(event) => {setNameOfClass(event.target.value);}}
-                    required
-                />
-            </div>
-            <button className="submit-button" onClick={createReview}> Submit </button>
-
-            {/* <div className="container">
+            <div className="container">
                 <h1> Rate a class! </h1>
                 
                 <form>
                     <div className="survey-questions">
                         <div className="question">
                             <label> Class name: </label>
-                            <input type="text" required/>
+                            <input
+                                type="text"
+                                onChange={(event) => {setNameOfClass(event.target.value);}}
+                                required
+                            />                        
                         </div>
                         <div className="question">
                             <label> Professor: </label>
-                            <input type="text" required/>
+                            <input
+                                type="text"
+                                required
+                                onChange={(event) => {setProfessor(event.target.value);}}
+                            />                        
                         </div>
                         <div className="question">
                             <label> Year: </label>
-                            <input type="number" min="1868" max="2022" placeholder="XXXX" required/>
+                            <input
+                                type="number"
+                                min="1868"
+                                max="2022"
+                                placeholder="XXXX"
+                                required
+                                onChange={(event) => {setYear(event.target.value);}}
+                                />
                         </div>
                         <div className="question">
                             <label> Semester: </label>
-                            <input type="text" required/>
+                            <input
+                                type="text"
+                                required
+                                onChange={(event) => {setSemester(event.target.value);}}
+                            />                        
                         </div>
                         <div className="question">
                             <label> Difficulty (1-10): </label>
-                            <input type="number" min="1" max="10" required/>
+                            <input
+                                type="number"
+                                min="1"
+                                max="10"
+                                required
+                                onChange={(event) => {setDifficulty(event.target.value);}}
+                                />
                         </div>
                         <div className="question">
                             <label> Grade Received: </label>
-                            <input type="text"/>
+                            <input
+                                type="text"
+                                required
+                                onChange={(event) => {setGrade(event.target.value);}}
+                            />                        
                         </div>
                         <div className="question">
                             <label> Required textbooks: </label>
-                            <input type="text"/>
+                            <input
+                                type="text"
+                                required
+                                onChange={(event) => {setTextbooks(event.target.value);}}
+                            />                        
                         </div>
                         <div className="question">
                             <label> Hours a week for homework: </label>
-                            <input type="number" min="0" max="168"/>
+                            <input
+                                type="number"
+                                min="0"
+                                max="168"
+                                onChange={(event) => {setHWHours(event.target.value);}}
+                                />
                         </div>
                         <div className="question">
                             <label> Number of midterms: </label>
-                            <input type="number" min="0" max="20"/>
+                            <input
+                                type="number"
+                                min="0"
+                                max="20"
+                                onChange={(event) => {setMidterms(event.target.value);}}
+                                />
                         </div>
                         <div className="question">
                             <label> Prereqs/coreqs: </label>
-                            <input type="text"/>
+                            <input
+                                type="text"
+                                required
+                                onChange={(event) => {setPrereqs(event.target.value);}}
+                            />                        
                         </div>
                         <div className="question">
                             <label> Classes to help prepare: </label>
-                            <input type="text"/>
+                            <input
+                                type="text"
+                                required
+                                onChange={(event) => {setPrepareClasses(event.target.value);}}
+                            />                        
                         </div>
                         <div className="question">
                             <label> Next classes to take: </label>
-                            <input type="numeric" maxlength="4"/>
+                            <input
+                                type="numeric"
+                                maxlength="4"
+                                onChange={(event) => {setNextClasses(event.target.value);}}
+                                />
                         </div>
                         <div className="checkbox-question">
                             <label> Has a no homework option? </label>
-                            <input type="checkbox"/>
+                            <input
+                                type="checkbox"
+                                required
+                                onChange={(event) => {setNoHW(event.target.value);}}
+                            />                        
                         </div>
                         <div className="checkbox-question">
                             <label> Has a clobber policy? </label>
-                            <input type="checkbox"/>
+                            <input
+                                type="checkbox"
+                                required
+                                onChange={(event) => {setClobber(event.target.value);}}
+                            />                        
                         </div>
                         <div className="checkbox-question">
                             <label> Has mandatory discussions? </label>
-                            <input type="checkbox"/>
+                            <input
+                                type="checkbox"
+                                required
+                                onChange={(event) => {setMandDisc(event.target.value);}}
+                            />                        
                         </div>
                         <div className="question">
                             <label> Comments? </label>
-                            <input type="text" className="comment"/>
+                            <input
+                                type="text"
+                                className="comment"
+                                onChange={(event) => {setComments(event.target.value);}}
+                            />
                         </div>
                         <div className="question next-line"> </div>
                         <div className="question next-line"> </div>
 
-                        <div className="question">
-                            <button className="submit-button" onClick={createReview}> Submit </button>
-                        </div>
+                    <button className="question submit-button" onClick={createReview}> Submit </button>
+
                     </div>
                 </form>
-            </div>  */}
+            </div> 
 
         </div>
-        
-
     )
-
-    // return (
-    //     <div className={SearchCSS.container}>
-    //         <form className={SearchCSS.form}>
-    //             <div> 
-    //                 <h1> Course Search </h1>
-    //                 <input className={SearchCSS.course} type="text" name="query" placeholder="Example: CS61B" />
-    //                 <button className={SearchCSS.btn} type="submit"> Search </button>
-    //             </div>
-    //         </form>
-    //         <div>
-    //             <ul>
-    //             {listOfClasses.map((course) => {
-    //                 return (
-    //                     <div>
-    //                         <h1>Name: {course.CourseName}</h1>
-    //                         <h1>Department: {course.Department}</h1>
-    //                         <h1>Units: {course.Units}</h1>
-    //                     </div>
-    //                 );
-    //             })}
-    //             </ul>
-    //         </div>
-    //         <ClassCard/>
-    //     </div>
-    // )
-
-    // return (
-    //     <div className="container">
-    //         <h1> Rate a class! </h1>
-            
-    //         <form>
-    //             <div className="survey-questions">
-    //                 <div className="question">
-    //                     <label> Class name: </label>
-    //                     <input type="text" required/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Professor: </label>
-    //                     <input type="text" required/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Year: </label>
-    //                     <input type="number" min="1868" max="2022" placeholder="XXXX" required/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Semester: </label>
-    //                     <input type="text" required/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Difficulty (1-10): </label>
-    //                     <input type="number" min="1" max="10" required/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Grade Received: </label>
-    //                     <input type="text"/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Required textbooks: </label>
-    //                     <input type="text"/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Hours a week for homework: </label>
-    //                     <input type="number" min="0" max="168"/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Number of midterms: </label>
-    //                     <input type="number" min="0" max="20"/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Prereqs/coreqs: </label>
-    //                     <input type="text"/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Classes to help prepare: </label>
-    //                     <input type="text"/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Next classes to take: </label>
-    //                     <input type="numeric" maxlength="4" required/>
-    //                 </div>
-    //                 <div className="checkbox-question">
-    //                     <label> Has a no homework option? </label>
-    //                     <input type="checkbox" required/>
-    //                 </div>
-    //                 <div className="checkbox-question">
-    //                     <label> Has a clobber policy? </label>
-    //                     <input type="checkbox" required/>
-    //                 </div>
-    //                 <div className="checkbox-question">
-    //                     <label> Has mandatory discussions? </label>
-    //                     <input type="checkbox" required/>
-    //                 </div>
-    //                 <div className="question">
-    //                     <label> Comments? </label>
-    //                     <input type="text" className="comment"/>
-    //                 </div>
-    //                 <div className="question next-line"> </div>
-    //                 <div className="question next-line"> </div>
-
-    //                 <div className="question button">
-    //                     <input type="submit"/>
-    //                 </div>
-    //             </div>
-    //         </form>
-    //  </div>
-    // )
-
-
 }
 export default Survey
