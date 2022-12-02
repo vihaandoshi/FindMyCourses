@@ -21,21 +21,21 @@ const courseCardSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    Prerequisites: [{
+    Prerequisites: {
         type: [String],
         default: "None"
-    }],
-    Corequisites: [{
+    },
+    Corequisites: {
         type: [String],
         default: "None"
-    }],
+    },
     Textbooks: {
         type: [String],
         default: "None"
     },
-})
+},  {collection: "coursecard" })
 
-module.exports = mongoose.model('CourseCardModel', courseCardSchema, 'CourseCard');
+module.exports = mongoose.model('Coursecard', courseCardSchema, 'coursecard');
     
 
 

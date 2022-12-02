@@ -1,4 +1,4 @@
-require('dotenv').config
+require('dotenv').config()
 
 const express = require('express')
 const app = express()
@@ -22,6 +22,7 @@ app.get("/getCourseCards", (req, res) => {
         res.json(err);
       } else {
         res.json(result);
+        console.log(result);
       }
     });
 });
