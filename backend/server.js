@@ -4,6 +4,9 @@ const express = require('express')
 const app = express()
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors());
+
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URI)
     .then(() => {
