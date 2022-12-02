@@ -22,8 +22,8 @@ const courseInfoSchema = new mongoose.Schema({
         default: 0
     },
     Clobber: {
-        type: String,
-        default: "None"
+        type: Boolean,
+        default: false
     },
     MandatoryDiscussion: {
         type: Boolean,
@@ -43,7 +43,7 @@ const courseInfoSchema = new mongoose.Schema({
     },
     Comment: {
         type: [String],
-        required: true
+        required: false
     },
     UsefulResources: {
         type: [String],
