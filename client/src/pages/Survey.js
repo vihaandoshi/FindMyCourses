@@ -126,7 +126,6 @@ const Survey = () => {
                             <label> Required textbooks: </label>
                             <input
                                 type="text"
-                                required
                                 onChange={(event) => {setTextbooks(event.target.value);}}
                             />                        
                         </div>
@@ -152,7 +151,6 @@ const Survey = () => {
                             <label> Prereqs/coreqs: </label>
                             <input
                                 type="text"
-                                required
                                 onChange={(event) => {setPrereqs(event.target.value);}}
                             />                        
                         </div>
@@ -160,7 +158,6 @@ const Survey = () => {
                             <label> Classes to help prepare: </label>
                             <input
                                 type="text"
-                                required
                                 onChange={(event) => {setPrepareClasses(event.target.value);}}
                             />                        
                         </div>
@@ -176,7 +173,6 @@ const Survey = () => {
                             <label> Has a no homework option? </label>
                             <input
                                 type="checkbox"
-                                required
                                 onChange={(event) => {setNoHW(event.target.value);}}
                             />                        
                         </div>
@@ -184,7 +180,6 @@ const Survey = () => {
                             <label> Has a clobber policy? </label>
                             <input
                                 type="checkbox"
-                                required
                                 onChange={(event) => {setClobber(event.target.value);}}
                             />                        
                         </div>
@@ -192,7 +187,6 @@ const Survey = () => {
                             <label> Has mandatory discussions? </label>
                             <input
                                 type="checkbox"
-                                required
                                 onChange={(event) => {setMandDisc(event.target.value);}}
                             />                        
                         </div>
