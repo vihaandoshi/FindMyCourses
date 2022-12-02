@@ -1,0 +1,24 @@
+.home {
+    display : inline-flex;
+    padding: 50px;
+    background-color: #C2F7F8;
+    gap : 10px;
+}
+
+.berkeley {
+    width : 500px;
+    height : 300px
+}
+
+.btn {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.18em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    text-align:center;
+    transition: all 0.2s;
+    background-color: white;
+}
