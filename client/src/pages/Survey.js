@@ -51,7 +51,7 @@ const Survey = () => {
     }
 
     return(
-        <div className="survey">
+        <div>
             {/* <div className="userDisplay">
                 {listOfReviews.map((user) => {
                     return (
@@ -62,8 +62,10 @@ const Survey = () => {
                 })}
             </div> */}
 
-            <div className="container">
-                <h1> Rate a class! </h1>
+            <div className="survey-container">
+                <div className="rate-a-class">
+                    <h1> Rate a class! </h1>
+                </div>
                 
                 <form>
                     <div className="survey-questions">
@@ -205,7 +207,9 @@ const Survey = () => {
                         <div className="question next-line"> </div>
                         <div className="question next-line"> </div>
 
-                    <button className="question submit-button" onClick={createReview}> Submit </button>
+                    <div className="question">
+                        <button className="submit-button" onClick={createReview}> Submit </button>
+                    </div>
 
                     </div>
                 </form>

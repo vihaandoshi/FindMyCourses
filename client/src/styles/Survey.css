@@ -1,10 +1,14 @@
-.container {
+.rate-a-class {
+    font-weight: 300;
+}
+
+.survey-container {
     position: relative;
     margin: 20px;
     margin-top: 50px;
 }
 
-.container form .survey-questions {
+.survey-container form .survey-questions {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,5 +60,4 @@ input[type=checkbox] {
 .submit-button {
     align-self: flex-start;
     padding: 5px;
-    width: 30px;
 }
