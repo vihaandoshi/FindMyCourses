@@ -1,7 +1,4 @@
-const { interactivity } = require("@chakra-ui/react")
-const { model } = require("mongoose")
-
-const mongoose = requier('mongoose')
+const mongoose = require('mongoose');
 
 const courseInfoSchema = new mongoose.Schema({
     Class: {
@@ -54,4 +51,4 @@ const courseInfoSchema = new mongoose.Schema({
     }]
 })
 
-model.exports = mongoose.model('CourseInfo', courseInfoSchema)
+model.exports = mongoose.model('CourseInfoModel', courseInfoSchema, 'CourseInfo');
