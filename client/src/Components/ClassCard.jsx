@@ -17,8 +17,8 @@ const ClassCard = (props) => {
         <div className="container"> 
             <span className="courseInfo"> 
                 <h3> {props.courseName}</h3>
-                <h4> {props.units} units</h4>
-                <h4> {props.department} </h4> 
+                <p> {props.units} units</p>
+                <p> {props.department} </p> 
             </span>
         </div> 
         )
