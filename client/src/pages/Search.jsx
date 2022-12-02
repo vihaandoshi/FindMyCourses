@@ -24,15 +24,17 @@ const Search = () => {
                 </div>
             </form>
             <div>
+                <ul>
                 {listOfClasses.map((course) => {
                     return (
                         <div>
                             <h1>Name: {course.CourseName}</h1>
-                            <h1>Age: {course.Professor}</h1>
-                            <h1>Username: {course.Units}</h1>
+                            <h1>Department: {course.Department}</h1>
+                            <h1>Units: {course.Units}</h1>
                         </div>
                     );
                 })}
+                </ul>
             </div>
             <ClassCard/>
         </div>
