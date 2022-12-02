@@ -3,7 +3,7 @@ import React from "react";
 import Search from "./Search"; 
 import ClassCard from "../Components/ClassCard"; 
 import CourseList from "../Components/CourseList";
-import TestBtn from "../Components/TestBtn"
+import CourseWButton from '../Components/CourseWButton';
 import  '../styles/Scheduler.css';
 
 const Scheduler = () => {
@@ -14,24 +14,25 @@ const Scheduler = () => {
         var arr = [...cards]; 
         arr.unshift(card);
         setCards(arr);  
-    }; 
+    }
 
     const sch = cards.map( (info) => 
-        <ClassCard courseName={info.courseName} units={info.units}/>
+        <CourseWButton courseName={info.courseName} units={info.units} bName="remove"/>
     );
+
+    var dict= { 
+        courseName: "cs 61c: machine structure", 
+        units: 4
+     }; 
 
     return (
     <div> 
     <div className="r">
-        {/* <div className="c">
-            <Search></Search>
-        </div> */}
         <div className="c">
-            <CourseList courseAction={updateSchedule}></CourseList> 
+            <CourseList courseAction={updateSchedule}></CourseList>  
         </div>
         <div className = "schedule c" id = "schedule">
-            <ClassCard courseName="CS61C: Machine Structures" units="4"> </ClassCard>
-            <ClassCard courseName="CS61C: Machine Structures"  units="4"> </ClassCard>
+            {sch}
         </div>
     </div> 
     </div> 

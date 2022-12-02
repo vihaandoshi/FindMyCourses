@@ -20,7 +20,7 @@ const ClassCard = (props) => {
                 <h4> {props.units} units</h4> 
             </span> 
         </div> 
-    )
+        )
 }
 
 export default ClassCard

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { NavLink  } from 'react-router-dom';
 import SearchCSS from '../styles/Search.module.css';
 import ClassCard from '../Components/ClassCard.jsx';
+import CourseWButton from "../Components/CourseWButton";
 import Axios from "axios";
 
 const Search = () => {

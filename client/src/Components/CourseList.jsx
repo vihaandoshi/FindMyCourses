@@ -6,14 +6,7 @@ import TestBtn from './TestBtn';
 //in this case courseAction will update the Schduler component and in the second it should redirect 
 const CourseList = (props) => {
     const [courses, setList] = useState([]);
-    //basically takes in a dictionary that looks like 
-    //  var dict={
-    //     courseName: "cs 61c: machine structure", 
-    //     units: 4, 
-    //     handleClick = () => do something, 
-    //     bName = "add course"
-    //  }; 
-    
+ 
     const updateList = (course) => {
         var arr = [...courses]; 
         arr.unshift(course); 
@@ -22,12 +15,14 @@ const CourseList = (props) => {
 
     const cList = courses.map( (eachCourse) => {
         
-    var dict = {
+    var d = {
         courseName : eachCourse.courseName, 
-        units : eachCourse.units
+        units: eachCourse.units
     };
+
+
     return (<CourseWButton courseName={eachCourse.courseName} units={eachCourse.units}
-        handleClick={() => {props.courseAction({dict})}} bName={eachCourse.bName}> </CourseWButton>); 
+        handleClick={() => {props.courseAction(d)}} bName={eachCourse.bName}> </CourseWButton>); 
     }
     ); 
 
