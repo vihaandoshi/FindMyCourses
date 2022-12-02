@@ -59,12 +59,14 @@ input[type=checkbox] {
 
 .submit-button {
     align-self: flex-start;
-    padding: 5px;
+    padding: 10px;
     background-color: whitesmoke;
+    border: none; 
     text-decoration:none;
     font-weight:300;
     text-align:center;
     transition: all 0.2s;
+    border-radius: 5px;
 }
 
 .submit-button:hover {
