@@ -7,9 +7,10 @@ import Axios from "axios";
 
 const Search = () => {
     const [listOfClasses, setListOfClasses] = useState([]);
+    const [query, setQuery] = useState("");
 
     useEffect(() => {
-        Axios.get("http://localhost:3001/getCourseCards").then((response) => {
+        Axios.get('http://localhost:3001/getCourseCards').then((response) => {
             setListOfClasses(response.data);
     });
     }, []);
@@ -20,15 +21,28 @@ const Search = () => {
             <form className={SearchCSS.form}>
                 <div> 
                     <h1> Course Search </h1>
-                    <input className={SearchCSS.course} type="text" name="query" placeholder="Example: CS61B" />
-                    <button className={SearchCSS.btn} type="submit"> Search </button>
+                    <input 
+                        className={SearchCSS.course} 
+                        type="text" 
+                        placeholder="Example: CS61B"
+                        onChange = {(e) => setQuery(e.target.value)} 
+                    />
                 </div>
             </form>
             <div>
-                {listOfClasses.map((course) => {
+                {listOfClasses
+                // .filter((query) => {
+                //     if (searchTitle === "") {
+                //         return value;
+                //     } else if {
+                //         value.toLowerCase().includes(query.toLowerCase());
+                //         return value;
+                //       }
+                // })
+                .map((course) => {
                     return (
                         <div>
-                            <CourseWButton courseName={course.CourseName} units={course.Units}> </CourseWButton>
+                            <ClassCard courseName={course.CourseName} units={course.Units}> </ClassCard>
                         </div>
                     );
                 })
