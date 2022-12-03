@@ -21,7 +21,6 @@ const CourseList = (props) => {
         units: eachCourse.units
     };
 
-
     return (<CourseWButton courseName={eachCourse.courseName} units={eachCourse.units}
         handleClick={() => {props.courseAction(d)}} bName={eachCourse.bName}> </CourseWButton>); 
     }
