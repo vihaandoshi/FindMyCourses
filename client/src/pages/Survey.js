@@ -4,12 +4,12 @@ import Axios from "axios";
 
 const Survey = () => {
     const [listOfReviews, setListOfReviews] = useState([]);
-    const [className, setClassName] = useState("");
-    const [professor, setProfessor] = useState("");
-    const [year, setYear] = useState(2022);
-    const [semester, setSemester] = useState("");
-    const [difficulty, setDifficulty] = useState(1);
-    const [grade, setGrade] = useState("");
+    const [ClassName, setClassName] = useState("");
+    const [Professor, setProfessor] = useState("");
+    const [Year, setYear] = useState(2022);
+    const [Semester, setSemester] = useState("");
+    const [Difficulty, setDifficulty] = useState(1);
+    const [GradeReceived, setGrade] = useState("");
     const [textbooks, setTextbooks] = useState("");
     const [HWHours, setHWHours] = useState(0);
     const [midterms, setMidterms] = useState(0);
@@ -29,12 +29,12 @@ const Survey = () => {
 
     const createReview = () => {
         Axios.post("http://localhost:3001/addReview", {
-            className,
-            professor,
-            year,
-            semester,
-            difficulty,
-            grade,
+            ClassName,
+            Professor,
+            Year,
+            Semester,
+            Difficulty,
+            GradeReceived,
             textbooks,
             HWHours,
             midterms,
@@ -165,7 +165,6 @@ const Survey = () => {
                             <label> Next classes to take: </label>
                             <input
                                 type="numeric"
-                                maxlength="4"
                                 onChange={(event) => {setNextClasses(event.target.value);}}
                                 />
                         </div>

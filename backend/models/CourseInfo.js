@@ -5,6 +5,10 @@ const courseInfoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    Year: {
+        type: Number,
+        required: true
+    },
     Professor: {
         type: String,
         required: true
@@ -27,7 +31,6 @@ const courseInfoSchema = new mongoose.Schema({
     },
     MandatoryDiscussion: {
         type: Boolean,
-        required: true
     },
     Difficulty: {
         type: Number,
@@ -43,7 +46,6 @@ const courseInfoSchema = new mongoose.Schema({
     },
     Comment: {
         type: [String],
-        required: false
     },
     UsefulResources: {
         type: [String],
